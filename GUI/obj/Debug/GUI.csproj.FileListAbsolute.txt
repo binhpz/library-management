@@ -58,3 +58,14 @@ C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\obj\Debug\GUI.csproj.CoreCo
 C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\obj\Debug\GUI.exe
 C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\obj\Debug\GUI.pdb
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.Core.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.DataSource.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.GridCommon.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.SfListView.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.Core.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.DataSource.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.GridCommon.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.SfListView.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\GUI\bin\Debug\Syncfusion.Shared.Base.xml

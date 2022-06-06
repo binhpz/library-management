@@ -21,6 +21,7 @@ namespace GUI
         private TraSachBus traSachBus = new TraSachBus { };
 
         private long selectedTheLoai = -1;
+        private long selectedTraSach = -1;
         private long selectedSach = -1;
         private int selectedItemLoaiSachh = -1;
         private int selectedItemDocGia = -1;
@@ -117,6 +118,7 @@ namespace GUI
             {
                 MessageBox.Show("Thêm thành công");
                 loadTableTheLoai();
+                launchLoaiSachOnSachTable(); 
             }
 
         }
@@ -161,6 +163,7 @@ namespace GUI
                 {
                     theLoaiBus.delete(selectedTheLoai);
                     loadTableTheLoai();
+                    launchLoaiSachOnSachTable();
                 }
             }
         }
@@ -207,6 +210,7 @@ namespace GUI
                 {
                     MessageBox.Show("Sửa thành công");
                     loadTableTheLoai();
+                    launchLoaiSachOnSachTable();
                 }
 
             }
@@ -325,6 +329,7 @@ namespace GUI
             {
                 MessageBox.Show("Thêm thành công");
                 loadTableSach();
+                launchSachOnMuonSachTable();
             }
 
         }
@@ -339,19 +344,15 @@ namespace GUI
         private void launchDocGiaOnMuonSachTable()
         {
             var docgia = docGiaBus.getList();
-            /*
             docgiaCBOnMuonSach.DataSource = docgia;
             docgiaCBOnMuonSach.DisplayMember = "TenDG";
-            */
         }
 
         private void launchSachOnMuonSachTable()
         {
-            /*
             var sach = sachsBus.getList();
             sachLBMuonSach.DataSource = sach;
             sachLBMuonSach.DisplayMember = "TenSach";
-            */
         }
 
         private void LoaiSachCb_SelectedIndexChanged(object sender, EventArgs e)
@@ -420,13 +421,15 @@ namespace GUI
 
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
-            maDocGiaTbTS.Text = "";
-            soLuongMuonTbTS.Text = "";
-            ngayTraTbTS.Text = "";
+            docGiaOnTraSach.Text = "";
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
+            traSachTable.DataSource = null;
+            var data = traSachBus.search(docGiaOnTraSach.Text);
+            var source = new BindingSource(data, null);
+            traSachTable.DataSource = source;
 
         }
 
@@ -444,10 +447,10 @@ namespace GUI
 
         private void muonSachTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            var cell = 3;
+            var cell = 2;
             if (e.ColumnIndex == cell && e.RowIndex >= 0)
             {
-                var sach = (HashSet<Sach>)muonSachTable.Rows[e.RowIndex].Cells[cell].Value;
+                var sach = (ICollection<Sach>)muonSachTable.Rows[e.RowIndex].Cells[cell].Value;
                 if (sach != null)
                 {
                     e.Value = string.Join(", \n", sach.Select(x => x.MaSach + ": " + x.TenSach));
@@ -498,6 +501,7 @@ namespace GUI
                     loadTableTheLoai();
                 }
                 loadTableSach();
+                launchSachOnMuonSachTable();
             }
         }
 
@@ -512,6 +516,7 @@ namespace GUI
                 {
                     sachsBus.delete(selectedSach);
                     loadTableSach();
+                    launchSachOnMuonSachTable();
                 }
             }
             else
@@ -557,6 +562,7 @@ namespace GUI
                 {
                     MessageBox.Show("Xóa thành công!");
                     loadTableDocGia();
+                    launchDocGiaOnMuonSachTable();
                 }
             }
            
@@ -599,6 +605,7 @@ namespace GUI
             {
                 MessageBox.Show("Thêm thành công");
                 loadTableDocGia();
+                launchDocGiaOnMuonSachTable();
             }
         }
 
@@ -635,6 +642,7 @@ namespace GUI
             {
                 MessageBox.Show("Sửa thành công");
                 loadTableDocGia();
+                launchDocGiaOnMuonSachTable();
             }
         }
 
@@ -662,6 +670,109 @@ namespace GUI
         private void loaiSachBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void docgiaCBOnMuonSach_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            selectedItemDocGia = docgiaCBOnMuonSach.SelectedIndex;
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+
+            DocGia dg = (DocGia)docgiaCBOnMuonSach.Items[selectedItemDocGia];
+
+            List<Sach> sach = new List<Sach>();
+
+            foreach (var item in sachLBMuonSach.SelectedItems)
+            {
+                sach.Add((Sach)item);
+            }
+
+            var errors = muonSachBus.muon(dg, ngayMuonOnMuonSach.Value, nhtOnMuonSach.Value, sach);
+            if (errors.Count > 0)
+            {
+                handleShowErrors(errors);
+            }
+            else
+            {
+                MessageBox.Show("Mượn thành công!");
+                loadTableMuonSach();
+                loadTableTraSach();
+            }
+           
+        }
+
+        private void guna2HtmlLabel21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sachs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void traSachTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dvg = sender as DataGridView;
+            //Get the current row's data, if any
+            var row = dvg.Rows[e.RowIndex];
+            //This works if you data bound the DGV as normal
+            var traSach = row.DataBoundItem as MuonTraSach;  //Or DataRow if you're using a Dataset
+            if (traSach != null)
+            {
+                selectedTraSach = traSach.ID;
+                nhtOnTraSach.Value = (DateTime)traSach.NgayHenTra;
+                ngayMuonOnTraSach.Value = (DateTime)traSach.NgayMuon;
+                docGiaOnTraSach.Text = traSach.DocGia.TenDG;
+                List<Sach> sach = traSach.Sach.ToList();
+                sachOnTraLv.DataSource = sach;
+                sachOnTraLv.DisplayMember = "TenSach";
+            }
+        }
+
+        private void traSachTable_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            var cell = 2;
+            if (e.ColumnIndex == cell && e.RowIndex >= 0)
+            {
+                var sach = (ICollection<Sach>)traSachTable.Rows[e.RowIndex].Cells[cell].Value;
+                if (sach != null)
+                {
+                    e.Value = string.Join(", \n", sach.Select(x => x.MaSach + ": " + x.TenSach));
+                }
+
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            var errors = traSachBus.Tra(selectedTraSach);
+            if (errors.Count > 0)
+            {
+                handleShowErrors(errors);
+            }
+            else
+            {
+                MessageBox.Show("Đã trả!");
+                loadTableTraSach();
+                loadTableMuonSach();
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DocGia dg = (DocGia)docgiaCBOnMuonSach.Items[selectedItemDocGia];
+            var data = muonSachBus.search(dg.MaDG);
+            muonSachTable.DataSource = null;
+            var source = new BindingSource(data, null);
+            muonSachTable.DataSource = source;
         }
     }
 }

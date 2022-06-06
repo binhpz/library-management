@@ -168,3 +168,14 @@ C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\obj\Debug\BLL.csproj.CoreCo
 C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\obj\Debug\BLL.dll
 C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\obj\Debug\BLL.pdb
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.Core.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.DataSource.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.GridCommon.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.SfListView.WinForms.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.Shared.Base.dll
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.Core.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.DataSource.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.GridCommon.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.SfListView.WinForms.xml
+C:\Users\DELL\Desktop\data\PJ-Library-Management\BLL\bin\Debug\Syncfusion.Shared.Base.xml

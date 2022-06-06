@@ -24,13 +24,7 @@ namespace DAL
         [Browsable(false)]
         [ForeignKey("MaDG")] public virtual DocGia DocGia { get; set; }
 
-
-        [DisplayName("Mã thủ thư")]
-        public long MaThuThu { get; set; }
-
-        [Browsable(false)]
-        [ForeignKey("MaThuThu")] public virtual ThuThu ThuThu { get; set; }
-
+        [Display(Order = 0)]
         [DisplayName("Sách")]
         public virtual ICollection<Sach> Sach { get; set; }
 
