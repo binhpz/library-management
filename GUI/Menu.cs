@@ -416,12 +416,15 @@ namespace GUI
 
         private void siticoneButton2_Click(object sender, EventArgs e)
         {
-
+            loadTableMuonSach();
+            loadTableTraSach();
         }
 
         private void siticoneButton3_Click(object sender, EventArgs e)
         {
             docGiaOnTraSach.Text = "";
+            loadTableMuonSach();
+            loadTableTraSach();
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -593,20 +596,38 @@ namespace GUI
 
         private void ThemDocGiaBtn_Click(object sender, EventArgs e)
         {
-            // check field emppty;
-            // 
-            var errors = docGiaBus.add(tenDocGiaQLDG.Text, NgaySinhDp.Value, DiaChiTb.Text, SoCmndTb.Text, SdtTb.Text, NgayHhtDp.Value);
+                if (tenDocGiaQLDG.Text == "")
+                {
+                    MessageBox.Show("yêu cầu nhập tên độc giả!");
+                }
+                else if (DiaChiTb.Text == "")
+                {
+                    MessageBox.Show("yêu cầu nhập địa chỉ!");
+                }
+                else if (SoCmndTb.Text == "")
+                {
+                    MessageBox.Show("yêu cầu nhập số CMND!");
+                }
+                else if (SdtTb.Text == "")
+                {
+                    MessageBox.Show("yêu cầu nhập số điện thoại!");
+                }
+                else
+                {
+                    var errors = docGiaBus.add(tenDocGiaQLDG.Text, NgaySinhDp.Value, DiaChiTb.Text, SoCmndTb.Text, SdtTb.Text, NgayHhtDp.Value);
 
-            if (errors.Count > 0)
-            {
-                handleShowErrors(errors);
-            }
-            else
-            {
-                MessageBox.Show("Thêm thành công");
-                loadTableDocGia();
-                launchDocGiaOnMuonSachTable();
-            }
+                    if (errors.Count > 0)
+                    {
+                        handleShowErrors(errors);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        loadTableDocGia();
+                        launchDocGiaOnMuonSachTable();
+                    }
+                
+                }
         }
 
         private void TableDocGia_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -632,17 +653,36 @@ namespace GUI
 
         private void SuaDocGiaBtn_Click(object sender, EventArgs e)
         {
-            var errors = docGiaBus.edit(selectedDocGia, tenDocGiaQLDG.Text, NgaySinhDp.Value, DiaChiTb.Text, SoCmndTb.Text, SdtTb.Text, NgayHhtDp.Value);
-
-            if (errors.Count > 0)
+            if (tenDocGiaQLDG.Text == "")
             {
-                handleShowErrors(errors);
+                MessageBox.Show("yêu cầu nhập tên độc giả!");
+            }
+            else if (DiaChiTb.Text == "")
+            {
+                MessageBox.Show("yêu cầu nhập địa chỉ!");
+            }
+            else if (SoCmndTb.Text == "")
+            {
+                MessageBox.Show("yêu cầu nhập số CMND!");
+            }
+            else if (SdtTb.Text == "")
+            {
+                MessageBox.Show("yêu cầu nhập số điện thoại!");
             }
             else
             {
-                MessageBox.Show("Sửa thành công");
-                loadTableDocGia();
-                launchDocGiaOnMuonSachTable();
+                var errors = docGiaBus.edit(selectedDocGia, tenDocGiaQLDG.Text, NgaySinhDp.Value, DiaChiTb.Text, SoCmndTb.Text, SdtTb.Text, NgayHhtDp.Value);
+
+                if (errors.Count > 0)
+                {
+                    handleShowErrors(errors);
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thành công");
+                    loadTableDocGia();
+                    launchDocGiaOnMuonSachTable();
+                }
             }
         }
 
@@ -768,11 +808,13 @@ namespace GUI
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DocGia dg = (DocGia)docgiaCBOnMuonSach.Items[selectedItemDocGia];
-            var data = muonSachBus.search(dg.MaDG);
-            muonSachTable.DataSource = null;
-            var source = new BindingSource(data, null);
-            muonSachTable.DataSource = source;
+                     DocGia dg = (DocGia)docgiaCBOnMuonSach.Items[selectedItemDocGia];
+                var data = muonSachBus.search(dg.MaDG);
+                muonSachTable.DataSource = null;
+                var source = new BindingSource(data, null);
+                muonSachTable.DataSource = source;
+                
         }
+
     }
 }

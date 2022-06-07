@@ -51,10 +51,15 @@ namespace GUI
             this.TabMuonSach = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.docgiaCBOnMuonSach = new System.Windows.Forms.ComboBox();
+            this.ngayMuonOnMuonSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.nhtOnMuonSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.sachLBMuonSach = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -125,32 +130,28 @@ namespace GUI
             this.ThemBtn = new Guna.UI2.WinForms.Guna2Button();
             this.QuanLyDocGia = new Guna.UI2.WinForms.Guna2TabControl();
             this.TabTraSach = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.docGiaOnTraSach = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ngayMuonOnTraSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.nhtOnTraSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.Sachs = new System.Windows.Forms.Label();
+            this.sachOnTraLv = new System.Windows.Forms.ListBox();
             this.traSachTable = new Siticone.Desktop.UI.WinForms.SiticoneDataGridView();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.docgiaCBOnMuonSach = new System.Windows.Forms.ComboBox();
-            this.sachLBMuonSach = new System.Windows.Forms.ListBox();
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.ngayMuonOnMuonSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.nhtOnMuonSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.loaiSachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loaiSachBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nhtOnTraSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.ngayMuonOnTraSach = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.docGiaOnTraSach = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.Sachs = new System.Windows.Forms.Label();
-            this.sachOnTraLv = new System.Windows.Forms.ListBox();
             this.TabMuonSach.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.muonSachTable)).BeginInit();
             this.QuanLyTheLoaiPage.SuspendLayout();
@@ -171,14 +172,13 @@ namespace GUI
             this.tableLayoutPanel4.SuspendLayout();
             this.QuanLyDocGia.SuspendLayout();
             this.TabTraSach.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.traSachTable)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSachBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSachBindingSource1)).BeginInit();
-            this.tableLayoutPanel14.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabMuonSach
@@ -237,21 +237,6 @@ namespace GUI
             this.tableLayoutPanel11.Size = new System.Drawing.Size(918, 265);
             this.tableLayoutPanel11.TabIndex = 19;
             // 
-            // guna2HtmlLabel10
-            // 
-            this.guna2HtmlLabel10.AutoSize = false;
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(0, 0);
-            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(374, 47);
-            this.guna2HtmlLabel10.TabIndex = 20;
-            this.guna2HtmlLabel10.Text = "Sách";
-            this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // guna2HtmlLabel16
             // 
             this.guna2HtmlLabel16.AutoSize = false;
@@ -296,6 +281,89 @@ namespace GUI
             this.guna2HtmlLabel18.TabIndex = 15;
             this.guna2HtmlLabel18.Text = "Ngày hẹn trả";
             this.guna2HtmlLabel18.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // docgiaCBOnMuonSach
+            // 
+            this.docgiaCBOnMuonSach.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.docgiaCBOnMuonSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docgiaCBOnMuonSach.FormattingEnabled = true;
+            this.docgiaCBOnMuonSach.Location = new System.Drawing.Point(279, 66);
+            this.docgiaCBOnMuonSach.Name = "docgiaCBOnMuonSach";
+            this.docgiaCBOnMuonSach.Size = new System.Drawing.Size(636, 37);
+            this.docgiaCBOnMuonSach.TabIndex = 24;
+            this.docgiaCBOnMuonSach.SelectedIndexChanged += new System.EventHandler(this.docgiaCBOnMuonSach_SelectedIndexChanged_1);
+            // 
+            // ngayMuonOnMuonSach
+            // 
+            this.ngayMuonOnMuonSach.Checked = true;
+            this.ngayMuonOnMuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ngayMuonOnMuonSach.FillColor = System.Drawing.Color.White;
+            this.ngayMuonOnMuonSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ngayMuonOnMuonSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.ngayMuonOnMuonSach.Location = new System.Drawing.Point(279, 109);
+            this.ngayMuonOnMuonSach.MaxDate = new System.DateTime(9000, 12, 31, 0, 0, 0, 0);
+            this.ngayMuonOnMuonSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.ngayMuonOnMuonSach.Name = "ngayMuonOnMuonSach";
+            this.ngayMuonOnMuonSach.Size = new System.Drawing.Size(636, 47);
+            this.ngayMuonOnMuonSach.TabIndex = 25;
+            this.ngayMuonOnMuonSach.Value = new System.DateTime(2022, 6, 6, 22, 49, 17, 686);
+            // 
+            // nhtOnMuonSach
+            // 
+            this.nhtOnMuonSach.Checked = true;
+            this.nhtOnMuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nhtOnMuonSach.FillColor = System.Drawing.Color.White;
+            this.nhtOnMuonSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nhtOnMuonSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.nhtOnMuonSach.Location = new System.Drawing.Point(279, 162);
+            this.nhtOnMuonSach.MaxDate = new System.DateTime(9000, 12, 31, 0, 0, 0, 0);
+            this.nhtOnMuonSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.nhtOnMuonSach.Name = "nhtOnMuonSach";
+            this.nhtOnMuonSach.Size = new System.Drawing.Size(636, 47);
+            this.nhtOnMuonSach.TabIndex = 26;
+            this.nhtOnMuonSach.Value = new System.DateTime(2022, 6, 6, 22, 49, 22, 62);
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel16.Controls.Add(this.guna2HtmlLabel10, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.sachLBMuonSach, 0, 1);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(944, 3);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 2;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.81818F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(374, 263);
+            this.tableLayoutPanel16.TabIndex = 20;
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.AutoSize = false;
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(0, 0);
+            this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Padding = new System.Windows.Forms.Padding(5);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(374, 47);
+            this.guna2HtmlLabel10.TabIndex = 20;
+            this.guna2HtmlLabel10.Text = "Sách";
+            this.guna2HtmlLabel10.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sachLBMuonSach
+            // 
+            this.sachLBMuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sachLBMuonSach.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sachLBMuonSach.FormattingEnabled = true;
+            this.sachLBMuonSach.ItemHeight = 26;
+            this.sachLBMuonSach.Location = new System.Drawing.Point(3, 50);
+            this.sachLBMuonSach.Name = "sachLBMuonSach";
+            this.sachLBMuonSach.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.sachLBMuonSach.Size = new System.Drawing.Size(368, 210);
+            this.sachLBMuonSach.TabIndex = 20;
             // 
             // tableLayoutPanel13
             // 
@@ -495,7 +563,7 @@ namespace GUI
             this.tableLayoutPanel10.Controls.Add(this.TenTheLoaiTb, 1, 1);
             this.tableLayoutPanel10.Controls.Add(this.guna2HtmlLabel8, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.guna2HtmlLabel9, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.clearTheLoai, 2, 3);
+            this.tableLayoutPanel10.Controls.Add(this.clearTheLoai, 2, 1);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -505,7 +573,7 @@ namespace GUI
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1315, 192);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1315, 236);
             this.tableLayoutPanel10.TabIndex = 20;
             this.tableLayoutPanel10.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel10_Paint);
             // 
@@ -532,7 +600,7 @@ namespace GUI
             this.MaTheLoaiTb.PlaceholderText = "";
             this.MaTheLoaiTb.ReadOnly = true;
             this.MaTheLoaiTb.SelectedText = "";
-            this.MaTheLoaiTb.Size = new System.Drawing.Size(735, 38);
+            this.MaTheLoaiTb.Size = new System.Drawing.Size(735, 49);
             this.MaTheLoaiTb.TabIndex = 19;
             this.MaTheLoaiTb.TextChanged += new System.EventHandler(this.MaTheLoaiTb_TextChanged);
             // 
@@ -549,13 +617,13 @@ namespace GUI
             this.TenTheLoaiTb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TenTheLoaiTb.ForeColor = System.Drawing.Color.Black;
             this.TenTheLoaiTb.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TenTheLoaiTb.Location = new System.Drawing.Point(364, 53);
+            this.TenTheLoaiTb.Location = new System.Drawing.Point(364, 64);
             this.TenTheLoaiTb.Margin = new System.Windows.Forms.Padding(5);
             this.TenTheLoaiTb.Name = "TenTheLoaiTb";
             this.TenTheLoaiTb.PasswordChar = '\0';
             this.TenTheLoaiTb.PlaceholderText = "";
             this.TenTheLoaiTb.SelectedText = "";
-            this.TenTheLoaiTb.Size = new System.Drawing.Size(735, 38);
+            this.TenTheLoaiTb.Size = new System.Drawing.Size(735, 49);
             this.TenTheLoaiTb.TabIndex = 2;
             this.TenTheLoaiTb.TextChanged += new System.EventHandler(this.TenTheLoaiTb_TextChanged);
             // 
@@ -569,7 +637,7 @@ namespace GUI
             this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(353, 44);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(353, 55);
             this.guna2HtmlLabel8.TabIndex = 13;
             this.guna2HtmlLabel8.Text = "Mã thể loại";
             this.guna2HtmlLabel8.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -580,17 +648,19 @@ namespace GUI
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(3, 50);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(3, 61);
             this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(353, 44);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(353, 55);
             this.guna2HtmlLabel9.TabIndex = 14;
             this.guna2HtmlLabel9.Text = "Tên thể loại";
             this.guna2HtmlLabel9.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // clearTheLoai
             // 
+            this.clearTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.clearTheLoai.Animated = true;
             this.clearTheLoai.AnimatedGIF = true;
             this.clearTheLoai.BorderRadius = 10;
@@ -609,11 +679,11 @@ namespace GUI
             this.clearTheLoai.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.clearTheLoai.HoverState.Parent = this.clearTheLoai;
             this.clearTheLoai.Image = ((System.Drawing.Image)(resources.GetObject("clearTheLoai.Image")));
-            this.clearTheLoai.Location = new System.Drawing.Point(1107, 146);
+            this.clearTheLoai.Location = new System.Drawing.Point(1107, 61);
             this.clearTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clearTheLoai.Name = "clearTheLoai";
             this.clearTheLoai.ShadowDecoration.Parent = this.clearTheLoai;
-            this.clearTheLoai.Size = new System.Drawing.Size(93, 42);
+            this.clearTheLoai.Size = new System.Drawing.Size(93, 55);
             this.clearTheLoai.TabIndex = 22;
             this.clearTheLoai.Text = "Hủy";
             this.clearTheLoai.Click += new System.EventHandler(this.clearTheLoai_Click);
@@ -2031,6 +2101,189 @@ namespace GUI
             this.TabTraSach.TabIndex = 7;
             this.TabTraSach.Text = "Trả sách";
             // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel14, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 1, 0);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(8, 5);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(1307, 278);
+            this.tableLayoutPanel17.TabIndex = 33;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel14.ColumnCount = 2;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.13245F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.86755F));
+            this.tableLayoutPanel14.Controls.Add(this.docGiaOnTraSach, 1, 1);
+            this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel21, 0, 1);
+            this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel22, 0, 2);
+            this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel23, 0, 3);
+            this.tableLayoutPanel14.Controls.Add(this.ngayMuonOnTraSach, 1, 2);
+            this.tableLayoutPanel14.Controls.Add(this.nhtOnTraSach, 1, 3);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 6;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(908, 274);
+            this.tableLayoutPanel14.TabIndex = 29;
+            // 
+            // docGiaOnTraSach
+            // 
+            this.docGiaOnTraSach.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.docGiaOnTraSach.DefaultText = "";
+            this.docGiaOnTraSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.docGiaOnTraSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.docGiaOnTraSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.docGiaOnTraSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.docGiaOnTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.docGiaOnTraSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.docGiaOnTraSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.docGiaOnTraSach.ForeColor = System.Drawing.Color.Black;
+            this.docGiaOnTraSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.docGiaOnTraSach.Location = new System.Drawing.Point(276, 47);
+            this.docGiaOnTraSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.docGiaOnTraSach.Name = "docGiaOnTraSach";
+            this.docGiaOnTraSach.PasswordChar = '\0';
+            this.docGiaOnTraSach.PlaceholderText = "";
+            this.docGiaOnTraSach.SelectedText = "";
+            this.docGiaOnTraSach.Size = new System.Drawing.Size(629, 41);
+            this.docGiaOnTraSach.TabIndex = 19;
+            // 
+            // guna2HtmlLabel21
+            // 
+            this.guna2HtmlLabel21.AutoSize = false;
+            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(3, 47);
+            this.guna2HtmlLabel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+            this.guna2HtmlLabel21.Padding = new System.Windows.Forms.Padding(5);
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(267, 41);
+            this.guna2HtmlLabel21.TabIndex = 13;
+            this.guna2HtmlLabel21.Text = "Độc giả";
+            this.guna2HtmlLabel21.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2HtmlLabel21.Click += new System.EventHandler(this.guna2HtmlLabel21_Click);
+            // 
+            // guna2HtmlLabel22
+            // 
+            this.guna2HtmlLabel22.AutoSize = false;
+            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(3, 92);
+            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
+            this.guna2HtmlLabel22.Padding = new System.Windows.Forms.Padding(5);
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(267, 41);
+            this.guna2HtmlLabel22.TabIndex = 14;
+            this.guna2HtmlLabel22.Text = "Ngày mượn";
+            this.guna2HtmlLabel22.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2HtmlLabel22.Click += new System.EventHandler(this.guna2HtmlLabel22_Click);
+            // 
+            // guna2HtmlLabel23
+            // 
+            this.guna2HtmlLabel23.AutoSize = false;
+            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel23.Location = new System.Drawing.Point(3, 137);
+            this.guna2HtmlLabel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
+            this.guna2HtmlLabel23.Padding = new System.Windows.Forms.Padding(5);
+            this.guna2HtmlLabel23.Size = new System.Drawing.Size(267, 41);
+            this.guna2HtmlLabel23.TabIndex = 15;
+            this.guna2HtmlLabel23.Text = "Ngày hẹn trả";
+            this.guna2HtmlLabel23.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ngayMuonOnTraSach
+            // 
+            this.ngayMuonOnTraSach.Checked = true;
+            this.ngayMuonOnTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ngayMuonOnTraSach.FillColor = System.Drawing.Color.White;
+            this.ngayMuonOnTraSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ngayMuonOnTraSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.ngayMuonOnTraSach.HoverState.FillColor = System.Drawing.Color.White;
+            this.ngayMuonOnTraSach.Location = new System.Drawing.Point(277, 94);
+            this.ngayMuonOnTraSach.Margin = new System.Windows.Forms.Padding(4);
+            this.ngayMuonOnTraSach.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.ngayMuonOnTraSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.ngayMuonOnTraSach.Name = "ngayMuonOnTraSach";
+            this.ngayMuonOnTraSach.Size = new System.Drawing.Size(627, 37);
+            this.ngayMuonOnTraSach.TabIndex = 24;
+            this.ngayMuonOnTraSach.Value = new System.DateTime(2022, 5, 25, 14, 58, 6, 671);
+            // 
+            // nhtOnTraSach
+            // 
+            this.nhtOnTraSach.Checked = true;
+            this.nhtOnTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nhtOnTraSach.FillColor = System.Drawing.Color.White;
+            this.nhtOnTraSach.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nhtOnTraSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.nhtOnTraSach.HoverState.FillColor = System.Drawing.Color.White;
+            this.nhtOnTraSach.Location = new System.Drawing.Point(277, 139);
+            this.nhtOnTraSach.Margin = new System.Windows.Forms.Padding(4);
+            this.nhtOnTraSach.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.nhtOnTraSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.nhtOnTraSach.Name = "nhtOnTraSach";
+            this.nhtOnTraSach.Size = new System.Drawing.Size(627, 37);
+            this.nhtOnTraSach.TabIndex = 25;
+            this.nhtOnTraSach.Value = new System.DateTime(2022, 5, 25, 14, 58, 10, 822);
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 1;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Controls.Add(this.Sachs, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.sachOnTraLv, 0, 1);
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(917, 3);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 2;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(387, 272);
+            this.tableLayoutPanel18.TabIndex = 30;
+            // 
+            // Sachs
+            // 
+            this.Sachs.AutoSize = true;
+            this.Sachs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Sachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sachs.Location = new System.Drawing.Point(3, 0);
+            this.Sachs.Name = "Sachs";
+            this.Sachs.Size = new System.Drawing.Size(381, 54);
+            this.Sachs.TabIndex = 0;
+            this.Sachs.Text = "Sách";
+            this.Sachs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Sachs.Click += new System.EventHandler(this.Sachs_Click);
+            // 
+            // sachOnTraLv
+            // 
+            this.sachOnTraLv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sachOnTraLv.FormattingEnabled = true;
+            this.sachOnTraLv.ItemHeight = 16;
+            this.sachOnTraLv.Location = new System.Drawing.Point(3, 57);
+            this.sachOnTraLv.Name = "sachOnTraLv";
+            this.sachOnTraLv.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.sachOnTraLv.Size = new System.Drawing.Size(381, 212);
+            this.sachOnTraLv.TabIndex = 1;
+            // 
             // traSachTable
             // 
             dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(239)))), ((int)(((byte)(212)))));
@@ -2204,72 +2457,6 @@ namespace GUI
             this.guna2Button5.Text = "Trả";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // docgiaCBOnMuonSach
-            // 
-            this.docgiaCBOnMuonSach.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.docgiaCBOnMuonSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.docgiaCBOnMuonSach.FormattingEnabled = true;
-            this.docgiaCBOnMuonSach.Location = new System.Drawing.Point(279, 66);
-            this.docgiaCBOnMuonSach.Name = "docgiaCBOnMuonSach";
-            this.docgiaCBOnMuonSach.Size = new System.Drawing.Size(636, 37);
-            this.docgiaCBOnMuonSach.TabIndex = 24;
-            this.docgiaCBOnMuonSach.SelectedIndexChanged += new System.EventHandler(this.docgiaCBOnMuonSach_SelectedIndexChanged_1);
-            // 
-            // sachLBMuonSach
-            // 
-            this.sachLBMuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sachLBMuonSach.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sachLBMuonSach.FormattingEnabled = true;
-            this.sachLBMuonSach.ItemHeight = 26;
-            this.sachLBMuonSach.Location = new System.Drawing.Point(3, 50);
-            this.sachLBMuonSach.Name = "sachLBMuonSach";
-            this.sachLBMuonSach.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.sachLBMuonSach.Size = new System.Drawing.Size(368, 210);
-            this.sachLBMuonSach.TabIndex = 20;
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 1;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Controls.Add(this.guna2HtmlLabel10, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.sachLBMuonSach, 0, 1);
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(944, 3);
-            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 2;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.81818F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(374, 263);
-            this.tableLayoutPanel16.TabIndex = 20;
-            // 
-            // ngayMuonOnMuonSach
-            // 
-            this.ngayMuonOnMuonSach.Checked = true;
-            this.ngayMuonOnMuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ngayMuonOnMuonSach.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ngayMuonOnMuonSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.ngayMuonOnMuonSach.Location = new System.Drawing.Point(279, 109);
-            this.ngayMuonOnMuonSach.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.ngayMuonOnMuonSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.ngayMuonOnMuonSach.Name = "ngayMuonOnMuonSach";
-            this.ngayMuonOnMuonSach.Size = new System.Drawing.Size(636, 47);
-            this.ngayMuonOnMuonSach.TabIndex = 25;
-            this.ngayMuonOnMuonSach.Value = new System.DateTime(2022, 6, 6, 22, 49, 17, 686);
-            // 
-            // nhtOnMuonSach
-            // 
-            this.nhtOnMuonSach.Checked = true;
-            this.nhtOnMuonSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nhtOnMuonSach.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nhtOnMuonSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.nhtOnMuonSach.Location = new System.Drawing.Point(279, 162);
-            this.nhtOnMuonSach.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.nhtOnMuonSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.nhtOnMuonSach.Name = "nhtOnMuonSach";
-            this.nhtOnMuonSach.Size = new System.Drawing.Size(636, 47);
-            this.nhtOnMuonSach.TabIndex = 26;
-            this.nhtOnMuonSach.Value = new System.DateTime(2022, 6, 6, 22, 49, 22, 62);
-            // 
             // loaiSachBindingSource
             // 
             this.loaiSachBindingSource.DataSource = typeof(DAL.LoaiSach);
@@ -2277,189 +2464,6 @@ namespace GUI
             // loaiSachBindingSource1
             // 
             this.loaiSachBindingSource1.DataSource = typeof(DAL.LoaiSach);
-            // 
-            // nhtOnTraSach
-            // 
-            this.nhtOnTraSach.Checked = true;
-            this.nhtOnTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nhtOnTraSach.FillColor = System.Drawing.Color.White;
-            this.nhtOnTraSach.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nhtOnTraSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.nhtOnTraSach.HoverState.FillColor = System.Drawing.Color.White;
-            this.nhtOnTraSach.Location = new System.Drawing.Point(277, 139);
-            this.nhtOnTraSach.Margin = new System.Windows.Forms.Padding(4);
-            this.nhtOnTraSach.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.nhtOnTraSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.nhtOnTraSach.Name = "nhtOnTraSach";
-            this.nhtOnTraSach.Size = new System.Drawing.Size(627, 37);
-            this.nhtOnTraSach.TabIndex = 25;
-            this.nhtOnTraSach.Value = new System.DateTime(2022, 5, 25, 14, 58, 10, 822);
-            // 
-            // ngayMuonOnTraSach
-            // 
-            this.ngayMuonOnTraSach.Checked = true;
-            this.ngayMuonOnTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ngayMuonOnTraSach.FillColor = System.Drawing.Color.White;
-            this.ngayMuonOnTraSach.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ngayMuonOnTraSach.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.ngayMuonOnTraSach.HoverState.FillColor = System.Drawing.Color.White;
-            this.ngayMuonOnTraSach.Location = new System.Drawing.Point(277, 94);
-            this.ngayMuonOnTraSach.Margin = new System.Windows.Forms.Padding(4);
-            this.ngayMuonOnTraSach.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.ngayMuonOnTraSach.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.ngayMuonOnTraSach.Name = "ngayMuonOnTraSach";
-            this.ngayMuonOnTraSach.Size = new System.Drawing.Size(627, 37);
-            this.ngayMuonOnTraSach.TabIndex = 24;
-            this.ngayMuonOnTraSach.Value = new System.DateTime(2022, 5, 25, 14, 58, 6, 671);
-            // 
-            // docGiaOnTraSach
-            // 
-            this.docGiaOnTraSach.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.docGiaOnTraSach.DefaultText = "";
-            this.docGiaOnTraSach.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.docGiaOnTraSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.docGiaOnTraSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.docGiaOnTraSach.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.docGiaOnTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.docGiaOnTraSach.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.docGiaOnTraSach.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.docGiaOnTraSach.ForeColor = System.Drawing.Color.Black;
-            this.docGiaOnTraSach.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.docGiaOnTraSach.Location = new System.Drawing.Point(276, 47);
-            this.docGiaOnTraSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.docGiaOnTraSach.Name = "docGiaOnTraSach";
-            this.docGiaOnTraSach.PasswordChar = '\0';
-            this.docGiaOnTraSach.PlaceholderText = "";
-            this.docGiaOnTraSach.SelectedText = "";
-            this.docGiaOnTraSach.Size = new System.Drawing.Size(629, 41);
-            this.docGiaOnTraSach.TabIndex = 19;
-            // 
-            // tableLayoutPanel14
-            // 
-            this.tableLayoutPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel14.ColumnCount = 2;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.13245F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.86755F));
-            this.tableLayoutPanel14.Controls.Add(this.docGiaOnTraSach, 1, 1);
-            this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel21, 0, 1);
-            this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel22, 0, 2);
-            this.tableLayoutPanel14.Controls.Add(this.guna2HtmlLabel23, 0, 3);
-            this.tableLayoutPanel14.Controls.Add(this.ngayMuonOnTraSach, 1, 2);
-            this.tableLayoutPanel14.Controls.Add(this.nhtOnTraSach, 1, 3);
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 2);
-            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 6;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(908, 274);
-            this.tableLayoutPanel14.TabIndex = 29;
-            // 
-            // guna2HtmlLabel23
-            // 
-            this.guna2HtmlLabel23.AutoSize = false;
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(3, 137);
-            this.guna2HtmlLabel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(267, 41);
-            this.guna2HtmlLabel23.TabIndex = 15;
-            this.guna2HtmlLabel23.Text = "Ngày hẹn trả";
-            this.guna2HtmlLabel23.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2HtmlLabel22
-            // 
-            this.guna2HtmlLabel22.AutoSize = false;
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(3, 92);
-            this.guna2HtmlLabel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(267, 41);
-            this.guna2HtmlLabel22.TabIndex = 14;
-            this.guna2HtmlLabel22.Text = "Ngày mượn";
-            this.guna2HtmlLabel22.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.guna2HtmlLabel22.Click += new System.EventHandler(this.guna2HtmlLabel22_Click);
-            // 
-            // guna2HtmlLabel21
-            // 
-            this.guna2HtmlLabel21.AutoSize = false;
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(3, 47);
-            this.guna2HtmlLabel21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Padding = new System.Windows.Forms.Padding(5);
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(267, 41);
-            this.guna2HtmlLabel21.TabIndex = 13;
-            this.guna2HtmlLabel21.Text = "Độc giả";
-            this.guna2HtmlLabel21.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.guna2HtmlLabel21.Click += new System.EventHandler(this.guna2HtmlLabel21_Click);
-            // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 2;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel14, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.tableLayoutPanel18, 1, 0);
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(8, 5);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 1;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(1307, 278);
-            this.tableLayoutPanel17.TabIndex = 33;
-            // 
-            // tableLayoutPanel18
-            // 
-            this.tableLayoutPanel18.ColumnCount = 1;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Controls.Add(this.Sachs, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.sachOnTraLv, 0, 1);
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(917, 3);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 2;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(387, 272);
-            this.tableLayoutPanel18.TabIndex = 30;
-            // 
-            // Sachs
-            // 
-            this.Sachs.AutoSize = true;
-            this.Sachs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Sachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sachs.Location = new System.Drawing.Point(3, 0);
-            this.Sachs.Name = "Sachs";
-            this.Sachs.Size = new System.Drawing.Size(381, 54);
-            this.Sachs.TabIndex = 0;
-            this.Sachs.Text = "Sách";
-            this.Sachs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Sachs.Click += new System.EventHandler(this.Sachs_Click);
-            // 
-            // sachOnTraLv
-            // 
-            this.sachOnTraLv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sachOnTraLv.FormattingEnabled = true;
-            this.sachOnTraLv.ItemHeight = 16;
-            this.sachOnTraLv.Location = new System.Drawing.Point(3, 57);
-            this.sachOnTraLv.Name = "sachOnTraLv";
-            this.sachOnTraLv.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.sachOnTraLv.Size = new System.Drawing.Size(381, 212);
-            this.sachOnTraLv.TabIndex = 1;
             // 
             // Menu
             // 
@@ -2475,6 +2479,7 @@ namespace GUI
             this.TabMuonSach.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.muonSachTable)).EndInit();
             this.QuanLyTheLoaiPage.ResumeLayout(false);
@@ -2495,15 +2500,14 @@ namespace GUI
             this.tableLayoutPanel4.ResumeLayout(false);
             this.QuanLyDocGia.ResumeLayout(false);
             this.TabTraSach.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.traSachTable)).EndInit();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.loaiSachBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiSachBindingSource1)).EndInit();
-            this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traSachTable)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.loaiSachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiSachBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
